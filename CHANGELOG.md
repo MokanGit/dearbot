@@ -17,6 +17,7 @@ Notable changes to DearBot are documented here. The project follows semantic ver
 - Preserved the GitHub Pages header and footer as a responsive sticky-header page shell.
 - Renamed container, ingress, and remote deployment examples from legacy `cv-*` identifiers to `dearbot-*`.
 - Added reproducible Python and pnpm dependency declarations plus CI, CodeQL, and Dependabot configuration.
+- Limited grouped Dependabot updates to minor and patch releases and standardized Python dependency input/lock validation.
 
 ### Security
 

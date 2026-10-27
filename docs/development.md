@@ -16,17 +16,24 @@ For a first real candidate setup, use the [beginner onboarding](onboarding.md) w
 ```bash
 python3 -m venv backend/venv
 source backend/venv/bin/activate
-pip install -r backend/requirements.lock
+pip install -r backend/requirements.txt
 pytest backend/tests
 uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 `--reload` is for local development only.
 
-`backend/requirements.txt` records the supported direct dependency ranges.
-`backend/requirements.lock` is the reviewed exact environment used by CI and
-the production container. Refresh it deliberately when dependencies change,
-then run the complete test suite.
+`backend/requirements.in` records the supported direct dependency ranges.
+`backend/requirements.txt` is the reviewed exact environment used by CI and
+the production container. Refresh it deliberately from `requirements.in` when
+dependencies change, then run `python scripts/verify_python_lock.py` and the
+complete test suite.
+
+```bash
+python -m pip install "pip-tools==7.5.3"
+python -m piptools compile --upgrade --output-file backend/requirements.txt backend/requirements.in
+python scripts/verify_python_lock.py
+```
 
 ## Native frontend
 

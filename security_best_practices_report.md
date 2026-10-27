@@ -40,7 +40,7 @@ layer. This is a deployment gate, not a reason to weaken the current checks.
 ### SEC-003 — Exact Python lock does not include artifact hashes
 
 - **Rule:** FASTAPI-SUPPLY-001
-- **Location:** `backend/requirements.lock`
+- **Location:** `backend/requirements.txt`
 - **Evidence:** every resolved package version is exact, but package artifact hashes are not recorded.
 - **Impact:** a compromised package index or replaced artifact is not detected by pip's `--require-hashes` mode.
 - **Fix:** adopt a hash-generating lock workflow such as `pip-compile --generate-hashes` and install with `--require-hashes`.

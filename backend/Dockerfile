@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && chown -R appuser:appgroup /app
 
 # Install Python packages
-COPY backend/requirements.lock /app/backend/requirements.lock
-RUN pip install --no-cache-dir -r /app/backend/requirements.lock
+COPY backend/requirements.txt /app/backend/requirements.txt
+RUN pip install --no-cache-dir -r /app/backend/requirements.txt
 
 # Copy only application source and config (avoid copying secrets or databases)
 COPY --chown=appuser:appgroup backend/app /app/backend/app

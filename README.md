@@ -125,7 +125,7 @@ Backend:
 ```bash
 python3 -m venv backend/venv
 source backend/venv/bin/activate
-pip install -r backend/requirements.lock
+pip install -r backend/requirements.txt
 pytest backend/tests
 ```
 

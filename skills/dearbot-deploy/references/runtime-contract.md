@@ -35,7 +35,7 @@ Apply request-size limits, timeouts, TLS, security headers, rate limiting, and a
 
 ## Images and builds
 
-The backend image installs `backend/requirements.lock` and copies application source. The frontend image copies an already-built `.next/standalone` tree. A clean image pipeline therefore needs this order:
+The backend image installs the exact pins in `backend/requirements.txt` and copies application source. The frontend image copies an already-built `.next/standalone` tree. A clean image pipeline therefore needs this order:
 
 1. frozen frontend dependency installation;
 2. frontend production build with browser-visible configuration available;
