@@ -103,8 +103,10 @@ async def test_production_fails_closed_without_synthetic_fallback(db_session):
 @pytest.mark.asyncio
 async def test_health_check_healthy_when_configured(db_session):
     orig_env = settings.ENV
+    orig_llm_provider = settings.LLM_PROVIDER
     orig_gemini_key = settings.GEMINI_API_KEY
     settings.ENV = "production"
+    settings.LLM_PROVIDER = "gemini"
     settings.GEMINI_API_KEY = "test_mock_gemini_key"
 
     try:
@@ -134,4 +136,5 @@ async def test_health_check_healthy_when_configured(db_session):
             assert hdata["corpus"]["public_documents_count"] >= 1
     finally:
         settings.ENV = orig_env
+        settings.LLM_PROVIDER = orig_llm_provider
         settings.GEMINI_API_KEY = orig_gemini_key
