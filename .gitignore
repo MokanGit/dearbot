@@ -1,0 +1,50 @@
+# Python
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+backend/data/*.db
+backend/data/*.db-shm
+backend/data/*.db-wal
+backend/data/generated_cvs/*
+!backend/data/generated_cvs/.gitkeep
+backend/data/synced_docs/*
+!backend/data/synced_docs/.gitkeep
+backend/data/applications/*
+!backend/data/applications/.gitkeep
+!backend/data/applications/_application_template.md
+!backend/data/applications/sample_application.md
+backend/data/applications_media/*
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+.pnpm-store/
+*.tsbuildinfo
+
+# Secrets & Local Environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+service_account.json
+credentials.json
+token.json
+
+# Local Working / Personal Artifacts
+/applications/
+/output/
+/tmp/
+/*CV*.md
+/personal/
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db

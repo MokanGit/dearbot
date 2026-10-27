@@ -1,0 +1,79 @@
+# Production Caddy configuration snippet for a self-hosted Caddy ingress
+# Two-layer Defense-in-Depth:
+# Layer 1: Public domain blocks /admin* with 403; only Tailscale exposes admin routes.
+# Layer 2: FastAPI validates Microsoft Entra ID cryptographic JWT tokens on all admin endpoints.
+
+(security_headers) {
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=()"
+        -Server
+    }
+}
+
+# 1. Public Recruiter & Candidate Profile Ingress
+dearbot.example.com {
+    import security_headers
+
+    # Block public access to Admin control plane (Tailscale only)
+    handle /admin* {
+        respond "Access Denied: Admin control plane is restricted to internal network." 403
+    }
+
+    # Public Backend API & Discovery endpoints (Recruiters & AI Agents)
+    # All sub-resource API endpoints and document downloads under an application token (/a/{token}/*)
+    handle /a/*/* {
+        reverse_proxy dearbot-backend:8000
+    }
+    handle /mcp/* {
+        reverse_proxy dearbot-backend:8000
+    }
+    handle /health {
+        reverse_proxy dearbot-backend:8000
+    }
+
+    # Frontend UI (Public Candidate profile page /a/{token}, root /, and Next.js static assets)
+    reverse_proxy dearbot-frontend:3000
+}
+
+# 2. Internal Tailscale / VPN Management Plane (Admin Only + Entra JWT Verification)
+http://your-tailscale-node.ts.net, http://100.x.y.z {
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    # Admin Backend API (Cryptographically protected with Entra ID Bearer token)
+    handle /admin/sync {
+        reverse_proxy dearbot-backend:8000
+    }
+    handle /admin/documents {
+        reverse_proxy dearbot-backend:8000
+    }
+    handle /admin/applications* {
+        reverse_proxy dearbot-backend:8000
+    }
+
+    # Redirect shortcuts to admin dashboard
+    handle /dearbot-admin* {
+        redir /admin 302
+    }
+    handle / {
+        redir /admin 302
+    }
+
+    # Frontend Admin Dashboard & Assets
+    handle /admin* {
+        reverse_proxy dearbot-frontend:3000
+    }
+    handle /_next/* {
+        reverse_proxy dearbot-frontend:3000
+    }
+
+    handle {
+        respond "Not Found" 404
+    }
+}

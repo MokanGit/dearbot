@@ -1,0 +1,38 @@
+# Version control
+.git
+.gitignore
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+service_account.json
+credentials.json
+token.json
+**/service_account.json
+**/credentials.json
+**/token.json
+
+# Backend data, databases & generated files
+backend/data/**
+backend/venv/**
+**/venv/**
+**/__pycache__/**
+**/*.py[cod]
+.pytest_cache/**
+
+# Node / Frontend artifacts
+frontend/node_modules/**
+frontend/.next/**
+!frontend/.next/standalone/**
+!frontend/.next/static/**
+frontend/out/**
+.pnpm-store/**
+
+# OS & Temporary files
+.DS_Store
+Thumbs.db
+*.log

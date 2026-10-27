@@ -1,0 +1,49 @@
+services:
+  backend:
+    container_name: dearbot-backend
+    image: ${DEARBOT_BACKEND_IMAGE_REF:-dearbot-backend:latest}
+    restart: unless-stopped
+    environment:
+      - ENV=production
+    env_file:
+      - /opt/apps/dearbot/runtime.env
+    volumes:
+      - /opt/apps/dearbot/data:/app/backend/data
+    expose:
+      - "8000"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      apps-proxy:
+        aliases:
+          - dearbot-backend
+
+  frontend:
+    container_name: dearbot-frontend
+    image: ${DEARBOT_FRONTEND_IMAGE_REF:-dearbot-frontend:latest}
+    restart: unless-stopped
+    environment:
+      - ENV=production
+      - NODE_ENV=production
+    env_file:
+      - /opt/apps/dearbot/runtime.env
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      apps-proxy:
+        aliases:
+          - dearbot-frontend
+
+networks:
+  apps-proxy:
+    external: true

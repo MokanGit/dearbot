@@ -1,0 +1,34 @@
+services:
+  backend:
+    container_name: dearbot-backend-local
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: dearbot-backend:local
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=development
+      - PORT=8000
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    volumes:
+      - ./backend/data:/app/backend/data
+
+  frontend:
+    container_name: dearbot-frontend-local
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    image: dearbot-frontend:local
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend

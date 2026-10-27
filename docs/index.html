@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2ff5a" />
+    <meta
+      name="description"
+      content="DearBot is open-source CV and cover letter generation for the age of automated recruitment."
+    />
+    <meta property="og:title" content="DearBot — Sincerely, Another Bot." />
+    <meta
+      property="og:description"
+      content="Open-source CV & cover letter generation for the age of automated recruitment."
+    />
+    <meta property="og:type" content="website" />
+    <title>DearBot — Sincerely, Another Bot.</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="DearBot home">
+        <span class="brand-mark" aria-hidden="true">D<span>B</span></span>
+        <span>DearBot</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="#why">Why</a>
+        <a href="#how">How it works</a>
+        <a href="#persona">Persona lab</a>
+        <a href="#principles">Principles</a>
+      </nav>
+
+      <a
+        class="header-link"
+        href="https://github.com/MokanGit/dearbot"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-kicker reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          Applicant tracking system detected
+        </div>
+
+        <div class="letter-shell reveal">
+          <div class="letter-meta" aria-hidden="true">
+            <span>APPLICATION_001</span>
+            <span>READABILITY: MACHINE</span>
+          </div>
+
+          <div class="letter-copy">
+            <p>Dear Hiring Bot,</p>
+            <h1 id="hero-title">
+              Since you don't read our applications,<br />
+              <em>we've stopped writing them.</em>
+            </h1>
+            <p class="sign-off">Sincerely,<br /><strong>Another Bot.</strong></p>
+          </div>
+
+          <div class="scan-line" aria-hidden="true"></div>
+          <span class="stamp" aria-hidden="true">AI<br />READY</span>
+        </div>
+
+        <div class="hero-footer reveal">
+          <p>
+            Open-source CV &amp; cover letter generation for the age of
+            automated recruitment.
+          </p>
+          <a class="button button-dark" href="#how">
+            See the human-readable version <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="DearBot capabilities">
+        <div class="marquee-track" aria-hidden="true">
+          <span>NO INVENTED EXPERIENCE</span><i>✳</i>
+          <span>ROLE-AWARE APPLICATIONS</span><i>✳</i>
+          <span>MACHINE-READABLE PROFILES</span><i>✳</i>
+          <span>OPEN SOURCE</span><i>✳</i>
+          <span>NO INVENTED EXPERIENCE</span><i>✳</i>
+          <span>ROLE-AWARE APPLICATIONS</span><i>✳</i>
+          <span>MACHINE-READABLE PROFILES</span><i>✳</i>
+          <span>OPEN SOURCE</span><i>✳</i>
+        </div>
+      </section>
+
+      <section class="manifesto section-pad" id="why">
+        <div class="section-label reveal">01 / The situation</div>
+        <div class="manifesto-grid">
+          <h2 class="reveal">Recruitment became automated.<br />Your application should know that.</h2>
+          <div class="manifesto-copy reveal">
+            <p>
+              CVs are screened, summarized and ranked by software before a human
+              ever meets them. DearBot treats that reality as an interface problem.
+            </p>
+            <p>
+              It turns your real career history into a targeted application package
+              that works for humans, applicant tracking systems and AI agents—while
+              keeping the source facts intact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow section-pad" id="how" aria-labelledby="workflow-title">
+        <div class="section-heading reveal">
+          <div class="section-label">02 / The polite response</div>
+          <h2 id="workflow-title">One source of truth.<br />Four useful outputs.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-number">01</span>
+            <div class="step-icon" aria-hidden="true">⌁</div>
+            <h3>Bring the evidence</h3>
+            <p>Connect a canonical Markdown CV or sync your documented career history.</p>
+            <code>source: verified</code>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">02</span>
+            <div class="step-icon" aria-hidden="true">◎</div>
+            <h3>Add the role</h3>
+            <p>Use the job description as a relevance lens—not a licence to hallucinate.</p>
+            <code>mode: evidence-first</code>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">03</span>
+            <div class="step-icon" aria-hidden="true">↯</div>
+            <h3>Generate the package</h3>
+            <p>Create a tailored CV, cover letter, fit summary and interview questions.</p>
+            <code>output: role-aware</code>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">04</span>
+            <div class="step-icon" aria-hidden="true">⌘</div>
+            <h3>Meet the machines</h3>
+            <p>Optionally share a human-friendly profile with JSON, MCP and agent Q&amp;A.</p>
+            <code>audience: everyone</code>
+          </li>
+        </ol>
+      </section>
+
+      <section class="principles section-pad" id="principles" aria-labelledby="principles-title">
+        <div class="principles-intro reveal">
+          <div class="section-label">03 / Non-negotiables</div>
+          <h2 id="principles-title">Optimised for relevance.<br /><em>Grounded in truth.</em></h2>
+        </div>
+
+        <div class="principle-list">
+          <article class="principle reveal">
+            <span>01</span>
+            <h3>No invented experience</h3>
+            <p>If the source material cannot support a claim, DearBot says so.</p>
+          </article>
+          <article class="principle reveal">
+            <span>02</span>
+            <h3>Your data, your deployment</h3>
+            <p>A single-candidate, self-hosted application. Your evidence stays under your control.</p>
+          </article>
+          <article class="principle reveal">
+            <span>03</span>
+            <h3>Readable by both species</h3>
+            <p>PDFs and pages for people; structured endpoints and MCP for their assistants.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="persona-lab section-pad" id="persona" aria-labelledby="persona-title" data-persona-lab>
+        <div class="persona-heading reveal">
+          <div>
+            <div class="section-label">04 / Coming feature</div>
+            <span class="coming-badge">Delegated authenticity · prototype</span>
+          </div>
+          <div>
+            <h2 id="persona-title">Build the perfect candidate.<br /><em>What could possibly go wrong?</em></h2>
+            <p>
+              Choose the personality the role requires. DearBot will then complete the
+              assessment on your behalf, removing the noise introduced by your own answers
+              and ensuring that your true, carefully selected persona shines through.
+              Because authenticity is too important to leave to chance.
+            </p>
+          </div>
+        </div>
+
+        <div class="persona-presets reveal" aria-label="Persona presets">
+          <span>Quick personas</span>
+          <button type="button" data-preset="operator">Reliable operator</button>
+          <button type="button" data-preset="maverick">Creative maverick</button>
+          <button type="button" data-preset="executive">Executive presence</button>
+          <button type="button" data-preset="dark">Corporate psychopath™*</button>
+        </div>
+
+        <div class="persona-workbench">
+          <form class="trait-controls reveal" aria-label="Big Five persona controls">
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-openness"><b>O</b> Openness</label>
+                <output for="trait-openness" data-output="openness">72</output>
+              </div>
+              <input id="trait-openness" type="range" min="0" max="100" value="72" data-trait="openness" />
+              <div class="trait-extremes"><span>Conventional</span><span>Explorer</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-conscientiousness"><b>C</b> Conscientiousness</label>
+                <output for="trait-conscientiousness" data-output="conscientiousness">82</output>
+              </div>
+              <input id="trait-conscientiousness" type="range" min="0" max="100" value="82" data-trait="conscientiousness" />
+              <div class="trait-extremes"><span>Spontaneous</span><span>Architect</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-extraversion"><b>E</b> Extraversion</label>
+                <output for="trait-extraversion" data-output="extraversion">62</output>
+              </div>
+              <input id="trait-extraversion" type="range" min="0" max="100" value="62" data-trait="extraversion" />
+              <div class="trait-extremes"><span>Reserved</span><span>Social engine</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-agreeableness"><b>A</b> Agreeableness</label>
+                <output for="trait-agreeableness" data-output="agreeableness">58</output>
+              </div>
+              <input id="trait-agreeableness" type="range" min="0" max="100" value="58" data-trait="agreeableness" />
+              <div class="trait-extremes"><span>Challenger</span><span>Harmoniser</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-neuroticism"><b>N</b> Neuroticism</label>
+                <output for="trait-neuroticism" data-output="neuroticism">24</output>
+              </div>
+              <input id="trait-neuroticism" type="range" min="0" max="100" value="24" data-trait="neuroticism" />
+              <div class="trait-extremes"><span>Unflappable</span><span>High-alert</span></div>
+            </div>
+
+            <p class="trait-footnote">
+              *Fictional preset. Big Five doesn't measure psychopathy.
+            </p>
+          </form>
+
+          <article class="persona-result reveal" aria-live="polite">
+            <div class="result-toolbar">
+              <span>DESIRED_PERSONA.json</span>
+              <span data-fit-label>Plausibly human</span>
+            </div>
+
+            <div class="persona-visual">
+              <svg class="radar" viewBox="0 0 200 200" role="img" aria-labelledby="radar-title radar-desc">
+                <title id="radar-title">Selected Big Five profile</title>
+                <desc id="radar-desc">A five-axis chart that updates as the personality sliders change.</desc>
+                <g class="radar-grid" aria-hidden="true">
+                  <polygon points="100,20 176,75 147,164 53,164 24,75"></polygon>
+                  <polygon points="100,46 151,83 132,142 68,142 49,83"></polygon>
+                  <polygon points="100,72 127,91 117,120 83,120 73,91"></polygon>
+                  <line x1="100" y1="100" x2="100" y2="20"></line>
+                  <line x1="100" y1="100" x2="176" y2="75"></line>
+                  <line x1="100" y1="100" x2="147" y2="164"></line>
+                  <line x1="100" y1="100" x2="53" y2="164"></line>
+                  <line x1="100" y1="100" x2="24" y2="75"></line>
+                </g>
+                <polygon class="radar-shape" data-radar-shape points="100,40 151,83 129,140 72,138 82,94"></polygon>
+                <g class="radar-labels" aria-hidden="true">
+                  <text x="100" y="11">O</text>
+                  <text x="188" y="75">C</text>
+                  <text x="154" y="184">E</text>
+                  <text x="45" y="184">A</text>
+                  <text x="10" y="75">N</text>
+                </g>
+              </svg>
+              <div class="persona-score">
+                <span>Optimisation signature</span>
+                <strong data-fit-score>39</strong><small>/100</small>
+              </div>
+            </div>
+
+            <div class="persona-copy">
+              <span class="persona-eyebrow">Generated archetype</span>
+              <h3 data-persona-name>Trusted Operator</h3>
+              <p data-persona-summary>
+                Methodical, composed and collaborative. The profile every hiring panel
+                claims to want until someone asks an inconvenient question.
+              </p>
+            </div>
+
+            <dl class="machine-readout">
+              <div><dt>System verdict</dt><dd data-system-verdict>Highly employable. Almost suspiciously so.</dd></div>
+              <div><dt>Strongest signal</dt><dd data-strongest-signal>Conscientiousness</dd></div>
+              <div><dt>Interview advice</dt><dd>Maybe talk to the person.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="terminal-section section-pad" aria-labelledby="terminal-title">
+        <div class="terminal-copy reveal">
+          <div class="section-label">05 / Make it yours</div>
+          <h2 id="terminal-title">The source is open.<br />The sarcasm is included.</h2>
+          <p>
+            Clone it, inspect it and adapt it to your own application workflow.
+            DearBot is a single-candidate self-hosted application, not a multi-tenant service.
+          </p>
+        </div>
+
+        <div class="terminal reveal" role="group" aria-label="Clone DearBot from GitHub">
+          <div class="terminal-bar">
+            <span>dearbot — zsh</span>
+            <span class="terminal-dots" aria-hidden="true">● ● ●</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> git clone https://github.com/MokanGit/dearbot.git</p>
+            <p class="terminal-response">Cloning into 'DearBot'...</p>
+            <p class="terminal-response">Recruitment process successfully questioned.</p>
+            <p><span class="prompt">$</span> <span class="cursor" aria-hidden="true"></span></p>
+          </div>
+          <button class="copy-button" type="button" data-copy="git clone https://github.com/MokanGit/dearbot.git">
+            Copy command
+          </button>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="final-mark reveal" aria-hidden="true">D<span>B</span></div>
+        <p class="reveal">Your move, hiring bot.</p>
+        <h2 class="reveal">DearBot</h2>
+        <a
+          class="button button-light reveal"
+          href="https://github.com/MokanGit/dearbot"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View the source <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>DearBot © <span data-year></span></p>
+      <p>Sincerely, Another Bot.</p>
+      <a href="https://github.com/MokanGit/dearbot/blob/main/LICENSE">MIT licensed</a>
+    </footer>
+  </body>
+</html>
