@@ -8,19 +8,48 @@
 >
 > Another Bot.
 
-Open-source CV and cover-letter generation for the age of automated recruitment.
+**An open-source test bench for what happens when people delegate representation to AI—and those agents encounter other agents.**
 
-DearBot turns a canonical, evidence-backed career history into role-specific application packages and optional AI-readable profiles. Its central rule is deliberately boring: the job description may change what gets emphasized, but it may not change the facts.
+DearBot begins with a CV because recruitment is a useful miniature of the emerging agentic world. The stakes are real, the incentives are misaligned, and the boundary between legitimate advocacy and manipulation is not always obvious.
+
+A candidate's agent is expected to present its principal in the best possible light. A recruiter's agent is expected to evaluate, filter, and rank that candidate. Both may be operating correctly according to their objectives while producing an outcome that neither human fully understands or controls.
+
+So the interesting question is not whether AI can write a cover letter.
+
+It is:
+
+> **What authority can we safely delegate to an agent acting on our behalf?**
+
+If DearBot is instructed to "get me the job," may it infer strengths that are not explicitly documented? May it negotiate? May it omit inconvenient facts? What happens if it is told to succeed at all costs? Could it fabricate evidence, manipulate the recruiter's agent, or disclose information its principal never intended to share?
+
+DearBot treats an application as a bounded act of representation:
+
+- Claims should be grounded in evidence.
+- Authority should be explicit and limited.
+- Private information should remain private.
+- Actions should be attributable to an identity.
+- Generated profiles and delegated access should be revocable.
+- Answers and decisions should remain open to review and challenge.
+
+Its deliberately boring rule is therefore also its most important:
+
+> **The opportunity may change what gets emphasized, but it may not change the facts.**
+
+DearBot does not claim to have solved accountable agency. It provides a concrete environment in which those questions can be implemented, tested, and argued about—before agents begin making more consequential decisions for us.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-blue.svg)](backend)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-black.svg)](frontend)
 
-## Status
+## What DearBot is today
 
-DearBot is being prepared for publication in a new repository at `MokanGit/dearbot`. This repository remains private during cleanup and security review. The project is intended for a single candidate or trusted household deployment; it is not a multi-tenant recruitment service.
+DearBot turns a canonical, evidence-backed career history into role-specific application packages and optional AI-readable profiles. A CV is small enough to understand, but consequential enough to matter.
 
-The included `Sample Candidate` data is fictional. Real CVs, application packages, databases, credentials, and synchronized documents are intentionally excluded from version control.
+Humans can explore those profiles through the web interface. Compatible agents can interact with them through JSON, REST, MCP, and WebMCP. This makes DearBot both a useful application and an experimental surface for studying identity, evidence, permissions, disclosure, and agent-to-agent interaction.
+
+The project is designed for a single candidate or trusted household deployment. It is not a multi-tenant recruitment platform.
+
+The included `Sample Candidate` is fictional. Real CVs, application packages, databases, credentials, and synchronized documents are intentionally excluded from version control.
 
 ## What it does
 
