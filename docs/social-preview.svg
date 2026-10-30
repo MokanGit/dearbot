@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">DearBot — Sincerely, Another Bot.</title>
+  <desc id="description">A DearBot social preview with the message: Since you don't read our applications, we've stopped writing them.</desc>
+
+  <rect width="1200" height="630" fill="#f4f1e8"/>
+  <circle cx="1115" cy="76" r="190" fill="#f2ff5a"/>
+  <path d="M0 505 380 630H0Z" fill="#f2ff5a" opacity=".72"/>
+
+  <rect x="80" y="75" width="1040" height="480" fill="#11110f"/>
+  <rect x="62" y="57" width="1040" height="480" fill="#fffef8" stroke="#11110f" stroke-width="3"/>
+
+  <g transform="translate(102 94)">
+    <rect width="58" height="58" fill="#11110f"/>
+    <text x="12" y="38" fill="#fffef8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">D</text>
+    <text x="31" y="38" fill="#f2ff5a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" font-weight="700">B</text>
+    <text x="78" y="37" fill="#11110f" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">DearBot</text>
+  </g>
+
+  <text x="912" y="117" fill="#11110f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="700" letter-spacing="2">APPLICATION_001</text>
+  <line x1="102" y1="176" x2="1060" y2="176" stroke="#11110f" stroke-opacity=".24" stroke-width="2"/>
+
+  <text x="112" y="232" fill="#11110f" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600">Dear Hiring Bot,</text>
+  <text x="112" y="310" fill="#11110f" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800">Since you don't read our applications,</text>
+  <text x="112" y="378" fill="#11110f" font-family="Georgia, Times New Roman, serif" font-size="61" font-style="italic" font-weight="700">we've stopped writing them.</text>
+
+  <text x="112" y="449" fill="#625f55" font-family="Arial, Helvetica, sans-serif" font-size="24">Sincerely,</text>
+  <text x="112" y="485" fill="#11110f" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">Another Bot.</text>
+
+  <g transform="translate(925 415) rotate(-7)">
+    <circle cx="60" cy="60" r="58" fill="#f2ff5a" stroke="#11110f" stroke-width="3"/>
+    <text x="60" y="51" text-anchor="middle" fill="#11110f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">AI</text>
+    <text x="60" y="77" text-anchor="middle" fill="#11110f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">READY</text>
+  </g>
+
+  <text x="62" y="592" fill="#11110f" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="1.2">OPEN-SOURCE TEST BENCH FOR ACCOUNTABLE AI REPRESENTATION</text>
+</svg>
