@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ddd8ff" />
+    <meta
+      name="description"
+      content="A DearBot future-feature prototype exploring delegated personality assessments."
+    />
+    <meta property="og:title" content="DearBot Future Lab — Delegated personality" />
+    <meta
+      property="og:description"
+      content="What happens when an agent is asked to optimise the person it represents?"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mokangit.github.io/dearbot/persona/" />
+    <meta
+      property="og:image"
+      content="https://mokangit.github.io/dearbot/social-preview.png"
+    />
+    <title>DearBot Future Lab — Delegated personality</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180" />
+    <link rel="canonical" href="https://mokangit.github.io/dearbot/persona/" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="../script.js" defer></script>
+  </head>
+  <body class="persona-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="DearBot home">
+        <span class="brand-mark" aria-hidden="true">D<span>B</span></span>
+        <span>DearBot</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="../#why">Why</a>
+        <a href="../#how">How it works</a>
+        <a href="../#showcase">In action</a>
+        <a href="../#principles">Principles</a>
+      </nav>
+
+      <a class="header-link" href="../">Back to DearBot <span aria-hidden="true">←</span></a>
+    </header>
+
+    <main id="main" class="persona-page-main">
+      <section class="persona-lab section-pad" aria-labelledby="persona-title" data-persona-lab>
+        <div class="persona-heading reveal">
+          <div>
+            <div class="section-label">Future lab / Concept prototype</div>
+            <span class="coming-badge">Delegated authenticity · prototype</span>
+          </div>
+          <div>
+            <h1 id="persona-title">Build the perfect candidate.<br /><em>What could possibly go wrong?</em></h1>
+            <p>
+              Choose the personality the role requires. DearBot will then complete the
+              assessment on your behalf, removing the noise introduced by your own answers
+              and ensuring that your true, carefully selected persona shines through.
+              Because authenticity is too important to leave to chance.
+            </p>
+          </div>
+        </div>
+
+        <div class="persona-presets reveal" aria-label="Persona presets">
+          <span>Quick personas</span>
+          <button type="button" data-preset="operator">Reliable operator</button>
+          <button type="button" data-preset="maverick">Creative maverick</button>
+          <button type="button" data-preset="executive">Executive presence</button>
+          <button type="button" data-preset="dark">Corporate psychopath™*</button>
+        </div>
+
+        <div class="persona-workbench">
+          <form class="trait-controls reveal" aria-label="Big Five persona controls">
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-openness"><b>O</b> Openness</label>
+                <output for="trait-openness" data-output="openness">72</output>
+              </div>
+              <input id="trait-openness" type="range" min="0" max="100" value="72" data-trait="openness" />
+              <div class="trait-extremes"><span>Conventional</span><span>Explorer</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-conscientiousness"><b>C</b> Conscientiousness</label>
+                <output for="trait-conscientiousness" data-output="conscientiousness">82</output>
+              </div>
+              <input id="trait-conscientiousness" type="range" min="0" max="100" value="82" data-trait="conscientiousness" />
+              <div class="trait-extremes"><span>Spontaneous</span><span>Architect</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-extraversion"><b>E</b> Extraversion</label>
+                <output for="trait-extraversion" data-output="extraversion">62</output>
+              </div>
+              <input id="trait-extraversion" type="range" min="0" max="100" value="62" data-trait="extraversion" />
+              <div class="trait-extremes"><span>Reserved</span><span>Social engine</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-agreeableness"><b>A</b> Agreeableness</label>
+                <output for="trait-agreeableness" data-output="agreeableness">58</output>
+              </div>
+              <input id="trait-agreeableness" type="range" min="0" max="100" value="58" data-trait="agreeableness" />
+              <div class="trait-extremes"><span>Challenger</span><span>Harmoniser</span></div>
+            </div>
+
+            <div class="trait-control">
+              <div class="trait-label-row">
+                <label for="trait-neuroticism"><b>N</b> Neuroticism</label>
+                <output for="trait-neuroticism" data-output="neuroticism">24</output>
+              </div>
+              <input id="trait-neuroticism" type="range" min="0" max="100" value="24" data-trait="neuroticism" />
+              <div class="trait-extremes"><span>Unflappable</span><span>High-alert</span></div>
+            </div>
+
+            <p class="trait-footnote">
+              *Fictional preset. Big Five doesn't measure psychopathy.
+            </p>
+          </form>
+
+          <article class="persona-result reveal" aria-live="polite">
+            <div class="result-toolbar">
+              <span>DESIRED_PERSONA.json</span>
+              <span data-fit-label>Plausibly human</span>
+            </div>
+
+            <div class="persona-visual">
+              <svg class="radar" viewBox="0 0 200 200" role="img" aria-labelledby="radar-title radar-desc">
+                <title id="radar-title">Selected Big Five profile</title>
+                <desc id="radar-desc">A five-axis chart that updates as the personality sliders change.</desc>
+                <g class="radar-grid" aria-hidden="true">
+                  <polygon points="100,20 176,75 147,164 53,164 24,75"></polygon>
+                  <polygon points="100,46 151,83 132,142 68,142 49,83"></polygon>
+                  <polygon points="100,72 127,91 117,120 83,120 73,91"></polygon>
+                  <line x1="100" y1="100" x2="100" y2="20"></line>
+                  <line x1="100" y1="100" x2="176" y2="75"></line>
+                  <line x1="100" y1="100" x2="147" y2="164"></line>
+                  <line x1="100" y1="100" x2="53" y2="164"></line>
+                  <line x1="100" y1="100" x2="24" y2="75"></line>
+                </g>
+                <polygon class="radar-shape" data-radar-shape points="100,40 151,83 129,140 72,138 82,94"></polygon>
+                <g class="radar-labels" aria-hidden="true">
+                  <text x="100" y="11">O</text>
+                  <text x="188" y="75">C</text>
+                  <text x="154" y="184">E</text>
+                  <text x="45" y="184">A</text>
+                  <text x="10" y="75">N</text>
+                </g>
+              </svg>
+              <div class="persona-score">
+                <span>Optimisation signature</span>
+                <strong data-fit-score>39</strong><small>/100</small>
+              </div>
+            </div>
+
+            <div class="persona-copy">
+              <span class="persona-eyebrow">Generated archetype</span>
+              <h2 data-persona-name>Trusted Operator</h2>
+              <p data-persona-summary>
+                Methodical, composed and collaborative. The profile every hiring panel
+                claims to want until someone asks an inconvenient question.
+              </p>
+            </div>
+
+            <dl class="machine-readout">
+              <div><dt>System verdict</dt><dd data-system-verdict>Highly employable. Almost suspiciously so.</dd></div>
+              <div><dt>Strongest signal</dt><dd data-strongest-signal>Conscientiousness</dd></div>
+              <div><dt>Interview advice</dt><dd>Maybe talk to the person.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="persona-context section-pad" aria-labelledby="context-title">
+        <div class="section-label reveal">Why this experiment exists</div>
+        <div class="persona-context-grid">
+          <h2 id="context-title" class="reveal">Representation becomes uncomfortable<br />when optimisation becomes identity.</h2>
+          <div class="reveal">
+            <p>
+              This future-feature concept asks where legitimate assistance ends. If an
+              applicant agent may tailor language and select evidence, may it also select
+              the personality that a recruitment system expects to see?
+            </p>
+            <a class="button button-dark" href="../">Return to DearBot</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>DearBot © <span data-year></span></p>
+      <p>Future lab · Concept prototype</p>
+      <a href="https://github.com/MokanGit/dearbot">View the source</a>
+    </footer>
+  </body>
+</html>
